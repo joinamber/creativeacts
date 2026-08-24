@@ -1,7 +1,23 @@
 import type { Metadata } from "next";
 
+const description =
+  "Get in touch with Creative Acts by email, LinkedIn, or X.";
+
 export const metadata: Metadata = {
-  title: "Contact — Creative Acts",
+  title: "Contact",
+  description,
+  alternates: {
+    canonical: "https://www.adptv.xyz/creativeacts/contact",
+  },
+  openGraph: {
+    title: "Contact — Creative Acts",
+    description,
+    url: "https://www.adptv.xyz/creativeacts/contact",
+  },
+  twitter: {
+    title: "Contact — Creative Acts",
+    description,
+  },
 };
 
 const CHANNELS = [

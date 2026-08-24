@@ -1,7 +1,23 @@
 import type { Metadata } from "next";
 
+const description =
+  "We blend rapid iteration with creative exploration to build technology that truly serves people — agile and rigorous at once.";
+
 export const metadata: Metadata = {
-  title: "Our Process — Creative Acts",
+  title: "Our Process",
+  description,
+  alternates: {
+    canonical: "https://www.adptv.xyz/creativeacts/process",
+  },
+  openGraph: {
+    title: "Our Process — Creative Acts",
+    description,
+    url: "https://www.adptv.xyz/creativeacts/process",
+  },
+  twitter: {
+    title: "Our Process — Creative Acts",
+    description,
+  },
 };
 
 const STEPS = [

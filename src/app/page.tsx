@@ -51,9 +51,9 @@ export default function Home() {
               <span className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
                 01
               </span>
-              <h3 className="font-display text-2xl mt-4 mb-3 text-[var(--ink)]">
+              <h2 className="font-display text-2xl mt-4 mb-3 text-[var(--ink)]">
                 Discovery
-              </h3>
+              </h2>
               <p className="text-sm text-[var(--ink-soft)] leading-relaxed">
                 We start from curiosity — mapping human needs, technology
                 shifts, and the overlooked spaces where new value can be
@@ -64,9 +64,9 @@ export default function Home() {
               <span className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
                 02
               </span>
-              <h3 className="font-display text-2xl mt-4 mb-3 text-[var(--ink)]">
+              <h2 className="font-display text-2xl mt-4 mb-3 text-[var(--ink)]">
                 Design
-              </h3>
+              </h2>
               <p className="text-sm text-[var(--ink-soft)] leading-relaxed">
                 Ideas take shape through rapid, hands-on prototyping —
                 iterating in public, with people, not just for them.
@@ -76,9 +76,9 @@ export default function Home() {
               <span className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
                 03
               </span>
-              <h3 className="font-display text-2xl mt-4 mb-3 text-[var(--ink)]">
+              <h2 className="font-display text-2xl mt-4 mb-3 text-[var(--ink)]">
                 Acts
-              </h3>
+              </h2>
               <p className="text-sm text-[var(--ink-soft)] leading-relaxed">
                 We ship. Forward-deployed and embedded, we turn validated
                 ideas into real, working solutions.

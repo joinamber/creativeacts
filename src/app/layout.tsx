@@ -15,10 +15,53 @@ const sans = Inter({
   variable: "--font-sans",
 });
 
+const SITE_URL = "https://www.adptv.xyz/creativeacts";
+const SITE_NAME = "Creative Acts";
+const SITE_DESCRIPTION =
+  "Creative Acts builds solutions at the intersection of innovation and design. We embody the forward-deployed mindset that pushes the boundaries of what's possible.";
+
 export const metadata: Metadata = {
-  title: "Creative Acts",
-  description:
-    "Creative Acts builds solutions at the intersection of innovation and design.",
+  metadataBase: new URL("https://www.adptv.xyz"),
+  title: {
+    default: SITE_NAME,
+    template: `%s — ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@gocreativeacts",
+    creator: "@gocreativeacts",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE_NAME,
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+  email: "amber@adptv.xyz",
+  sameAs: [
+    "https://www.linkedin.com/company/adptvintel/",
+    "https://x.com/gocreativeacts",
+  ],
 };
 
 export default function RootLayout({
@@ -29,6 +72,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${display.variable} ${sans.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Nav />
         <main className="min-h-screen">{children}</main>
         <Footer />

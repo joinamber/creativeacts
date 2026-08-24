@@ -1,7 +1,23 @@
 import type { Metadata } from "next";
 
+const description =
+  "Exploring the intersections of technology, design, and innovation to create AI-powered solutions that are human-centered and impactful.";
+
 export const metadata: Metadata = {
-  title: "Projects — Creative Acts",
+  title: "Projects",
+  description,
+  alternates: {
+    canonical: "https://www.adptv.xyz/creativeacts/projects",
+  },
+  openGraph: {
+    title: "Projects — Creative Acts",
+    description,
+    url: "https://www.adptv.xyz/creativeacts/projects",
+  },
+  twitter: {
+    title: "Projects — Creative Acts",
+    description,
+  },
 };
 
 const PROJECTS = [
