@@ -25,27 +25,29 @@ npm run dev
 
 The site is served at `http://localhost:3000/creativeacts` because of the `basePath` config below.
 
-## Deployment: www.amberliang.xyz/creativeacts
+## Deployment
+
+Deployed as its own Vercel project (`creativeacts`), live at:
+
+- https://creativeacts.vercel.app/creativeacts
 
 This app is configured with `basePath: "/creativeacts"` in `next.config.ts` so all routes and assets resolve under that subpath.
 
-To host it at `www.amberliang.xyz/creativeacts`:
+### Wiring up www.adptv.xyz/creativeacts
 
-1. Push this repo to GitHub and import it as its own Vercel project (e.g. `creativeacts`). Deploy it — Vercel will give it a `*.vercel.app` URL where every route is already under `/creativeacts` (e.g. `creativeacts.vercel.app/creativeacts`).
-2. In the project that serves `www.amberliang.xyz` (the `amberliang-site` Vercel project), add a rewrite so requests to `/creativeacts/:path*` proxy to the deployed Creative Acts app. In that project's `next.config.ts`:
+The target URL is `www.adptv.xyz/creativeacts`. `adptv.xyz` is currently served by the `adaptive-erp` Vercel project (a Vite app). To finish routing the subpath there, add this to that project's `vercel.json` (create the file if it doesn't exist) and redeploy:
 
-   ```ts
-   async rewrites() {
-     return [
-       {
-         source: "/creativeacts/:path*",
-         destination: "https://creativeacts.vercel.app/creativeacts/:path*",
-       },
-     ];
-   }
-   ```
+```json
+{
+  "rewrites": [
+    {
+      "source": "/creativeacts/:path*",
+      "destination": "https://creativeacts.vercel.app/creativeacts/:path*"
+    }
+  ]
+}
+```
 
-   Or configure the equivalent rewrite in `vercel.json` on the `amberliang-site` project if you prefer not to touch `next.config.ts` there.
-3. Redeploy `amberliang-site`. `www.amberliang.xyz/creativeacts` will now serve this app while keeping the rest of `amberliang.xyz` untouched.
+This wasn't done automatically because the `adaptive-erp` project's local source could not be located (only a stale `node_modules` remained in its old scratchpad path, and the Vercel project isn't linked to a GitHub repo). Once you point me at its source (or a GitHub repo), I can add the rewrite and redeploy it.
 
-No DNS changes are needed since everything routes through the existing `amberliang.xyz` domain.
+No DNS changes are needed — everything routes through the existing `adptv.xyz` domain once the rewrite is in place.
