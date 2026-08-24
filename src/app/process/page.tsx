@@ -63,21 +63,6 @@ export default function ProcessPage() {
           </div>
         ))}
       </div>
-
-      <div className="mt-20 pt-10 border-t border-[var(--hairline)]">
-        <p className="text-sm text-[var(--ink-soft)]">
-          Read more about the thinking behind our approach at{" "}
-          <a
-            href="https://www.coaltlab.com/process"
-            target="_blank"
-            rel="noreferrer"
-            className="text-[var(--ink)] underline underline-offset-4"
-          >
-            coaltlab.com/process
-          </a>
-          .
-        </p>
-      </div>
     </section>
   );
 }
