@@ -29,13 +29,6 @@ const PROJECTS = [
     href: "https://hyperpersona.cc/",
   },
   {
-    name: "Adaptive ERP",
-    category: "Business Enablers",
-    description:
-      "Reimagining ERP systems with AI-native workflows for leaner, smarter operations.",
-    href: "https://adptv.xyz/",
-  },
-  {
     name: "The Contrarian Economist",
     category: "Creative Endeavors",
     description:
@@ -43,8 +36,8 @@ const PROJECTS = [
     href: "https://open.spotify.com/show/5qMwiP1Ismiv6lvJ02exns",
   },
   {
-    name: "Agentic Infrastructure",
-    category: "Agentic Commerce",
+    name: "KYAN",
+    category: "Agentic Authentication",
     description:
       "Authenticating AI agents for secure transactions and delegated action — the trust layer for an agentic future.",
     href: "https://kyan.coaltlab.com/",
